@@ -13,13 +13,13 @@ build: [
 
 depends: [
   "ocaml" {>= "4.03.0"}
-  "dune" {build}
+  "jbuilder" {build}
   "graphql" {= version}
-  "alcotest" {with-test}
-  "lwt"
+  "cohttp" {>= "1.0.0"}
+  "crunch"
 ]
 
-synopsis: "Build GraphQL schemas with Lwt support"
+synopsis: "Run GraphQL servers with `cohttp`"
 
 description: """
-`graphql-lwt` adds support for Lwt to `graphql`, so you can use Lwt in your GraphQL schema resolver functions."""
+This package allows you to execute Cohttp HTTP requests against GraphQL schemas build with `graphql`. The package is agnostic to Lwt/Async."""
